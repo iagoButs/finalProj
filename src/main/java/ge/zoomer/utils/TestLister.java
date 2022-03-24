@@ -1,4 +1,4 @@
-package com.Facebook.Utils;
+package ge.zoomer.utils;
 
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;

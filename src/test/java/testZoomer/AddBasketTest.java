@@ -2,15 +2,17 @@ package testZoomer;
 
 import ge.zoomer.PageObject.SearchAndAddPage;
 import ge.zoomer.StepObject.SearchAndAddPageSteps;
+import ge.zoomer.utils.Retry;
 import ge.zoomer.utils.Runner;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.sleep;
-
+@Listeners(ge.zoomer.utils.TestLister.class)
 public class AddBasketTest extends Runner {
 
-    @Test(priority = 0)
+    @Test(priority = 0, retryAnalyzer = Retry.class)
     public void checkBasketIsempty() {
         SearchAndAddPageSteps steps=new SearchAndAddPageSteps();
         SearchAndAddPage asserts = new SearchAndAddPage();
@@ -23,7 +25,7 @@ public class AddBasketTest extends Runner {
 
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, retryAnalyzer = Retry.class)
     public  void searchAndAdd(){
         SearchAndAddPageSteps steps=new SearchAndAddPageSteps();
         SearchAndAddPage asserts = new SearchAndAddPage();
@@ -48,7 +50,7 @@ public class AddBasketTest extends Runner {
 
     }
 
-    @Test (priority = 2)
+    @Test (priority = 2, retryAnalyzer = Retry.class)
     public void searchAndAddAllItems(){
         SearchAndAddPageSteps steps=new SearchAndAddPageSteps();
         SearchAndAddPage asserts = new SearchAndAddPage();

@@ -1,4 +1,4 @@
-package com.Facebook.Utils;
+package ge.zoomer.utils;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
