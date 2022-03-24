@@ -1,0 +1,7 @@
+.idea
+allure-results
+build
+target
+finalproj.iml
+pom.xml
+src/main/resources
