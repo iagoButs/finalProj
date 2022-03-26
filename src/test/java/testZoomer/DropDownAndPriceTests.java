@@ -16,13 +16,13 @@ public class DropDownAndPriceTests extends Runner{
         RadioBtnAndDrpDownPageSteps steps=new RadioBtnAndDrpDownPageSteps();
         steps.searchandcheck();
         steps.sortbyDescending();
-        sleep(10000);
+
     }
     @Test(priority = 1, retryAnalyzer = Retry.class)
     public void priceRange(){
         PriceRangeSteps steps=new PriceRangeSteps();
         steps.priceRange();
 
-        sleep(2000);
+
     }
 }
